@@ -1,41 +1,34 @@
-# Student Grade Calculator
+# area of circle
+r=float(input("enter radius of circle:"))
+area=2*3.14*r*r
+print("area of circle is",area)
 
-# function to calculate GPA
-def calculate_gpa(grades, credits):
-    total_credits = sum(credits)
-    weighted_sum = 0
-    for i in range(len(grades)):
-        weighted_sum += grades[i] * credits[i]
-    gpa = weighted_sum / total_credits
-    return gpa
+# area of triangle
 
-# function to calculate letter grade
-def calculate_letter_grade(gpa):
-    if gpa >= 90:
-        return "A"
-    elif gpa >= 80:
-        return "B"
-    elif gpa >= 70:
-        return "C"
-    elif gpa >= 60:
-        return "D"
-    else:
-        return "F"
+b=float(input("enter height:"))
+h=float(input("enter base:"))
+area=0.5*b*h
+print("area of triangle",area)
 
-# main function
-def main():
-    num_courses = int(input("Enter the number of courses: "))
-    grades = []
-    credits = []
-    for i in range(num_courses):
-        grade = float(input("Enter the grade for course " + str(i+1) + ": "))
-        credit = int(input("Enter the credit hours for course " + str(i+1) + ": "))
-        grades.append(grade)
-        credits.append(credit)
-    gpa = calculate_gpa(grades, credits)
-    letter_grade = calculate_letter_grade(gpa)
-    print("Your GPA is", round(gpa, 2))
-    print("Your letter grade is", letter_grade)
+# area of rectangle
+length=float(input("enter the length:"))
+breadth=float(input("enter the breadth:"))
+area=length*breadth
+print("area of rectangle is",area)
 
-# calling main function
-main()
+# perimeter of circle
+r=int(input("enter the radius:"))
+perimeter=2*3.14*r
+print("perimeter of circle is",perimeter)
+
+# find the minimum and maximum numbers
+numbers=[1,2,3,4,5,6,7,8,9,10]
+min=numbers[0]
+max=numbers[0]
+for i in range(len(numbers)):
+    if numbers[i]>max:
+        max=numbers[i]
+    elif numbers[i]<min:
+        print("min:",min)
+        print("max:",max)
+
